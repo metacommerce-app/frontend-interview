@@ -10,7 +10,7 @@
 
 During this assignment, we are building a simple, yet powerful, Autcomplete component. This autocomplete will help find across different articles. The component must:
 1. Have an input where the user could search for an article based on its title. (see `components/Input`)
-2. Have a list component showing the first 3 articles (or less) (see `components/ListItem`)
+2. Have a list component showing the first 3 articles (or less) (see `components/List`)
 3. when searching for an article, a call should be made to `/api/posts` to `GET` the different posts based on the given input. The get requests expects a `params` object of type `{ q: string }` where q is the query to filter all the posts. Create a Typescript interface for that object in `features/home/Autocomplete/Autocomplete.types.ts`
 4. When selecting an article `onSelectItem` should be triggered 
 
