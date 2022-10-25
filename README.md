@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+1. run `npm install` or `yarn`
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+2. run `npm run dev` or `yarn dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Assignment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+During this assignment, we are building a simple, yet powerful, Autcomplete component. This autocomplete will help find across different articles. The component must:
+1. Have an input where the user could search for an article based on its title. (see `components/Input`)
+2. Have a list component showing the first 3 articles (or less) (see `components/ListItem`)
+3. when searching for an article, a call should be made to `/api/posts` to `GET` the different posts based on the given input. The get requests expects a `params` object of type `{ q: string }` where q is the query to filter all the posts
+4. When selecting an article `onSelectItem` should be triggered 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Feel free to ask as many questions as you want. You can see this as a peer coding interview where we look together at how we could solve this problem. Please explain, to the best of your abilities, why you choose to do something. `We care more about your thought process than your clean code!`
 
-## Learn More
+## Questions
 
-To learn more about Next.js, take a look at the following resources:
+Here's some questions to better understand your React/Next.js knowledge. No worries if you don't know the answers, we're here to help.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. One annoying thing about this autocomplete is that it will fetch on every keystroke... How could we optimize this? 
+2. Moreover, here's one annoying scenario: 
+    - Suppose I write `hello world` in the input bar the first time
+    - I fetch the data and show it on the screen (awesome!)
+    - I do another search `hackerman`, same thing I get my response (woohooo!)
+    - For some reason, I write `hello world` again in the search bar, it will refetch the same data as the first time... 👎
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    How could we avoid refetching the same data over and over again? Do you know a library that can do that? If yes, please explain how it works.
 
-## Deploy on Vercel
+3. Last but not least, suppose (for some strange reason) that the `ListItems` component and the `Input` component were NOT part of the same parent component (think opposite side of the DOM tree). How would you still achieve this autocomplete logic? Do you know a library that can do that? If yes, please explain how it works & why it is better than some others (in your very biased opinion)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The libraries used during this interview are similar to the ones we use at Metacommerce on a daily basis. No worries if you do not know some of them, here's all the documentation you need in case you forget something:
+
+- [Ant Design components library](https://ant.design/components/overview/)
+- [Axios](https://axios-http.com/docs/api_intro)
+- [Next.js](https://nextjs.org/docs/getting-started)
+- [lodash](https://lodash.com/docs/4.17.15)
+
+## 
