@@ -30,7 +30,7 @@ Here's some questions to better understand your React/Next.js knowledge. No worr
 
     How could we avoid refetching the same data over and over again? Do you know a library that can do that? If yes, please explain how it works.
 
-3. Suppose (for some strange reason) that the `ListItems` component and the `Input` component were NOT part of the same parent component (think opposite side of the DOM tree). How would you still achieve this autocomplete logic? Do you know a library that can do that? If yes, please explain how it works & why it is better than some others (in your very biased opinion)
+3. Suppose (for some strange reason) that the `List` component and the `Input` component you created were NOT part of the same parent component (think opposite side of the DOM tree). How would you still achieve this autocomplete logic? Do you know a library that can do that? If yes, please explain how it works & why it is better than some others (in your very biased opinion)
 
 4. The folder structure + logic used during this interview looks similar to the Metacommerce application. What's your opinion on it? What would you do differently? Why?
 
