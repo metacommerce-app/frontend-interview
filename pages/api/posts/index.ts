@@ -11,8 +11,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             const posts = response.data as { title: string }[]
             const { q } = req.query
 
-            console.log(posts)
-
             return res.status(200).send({ posts: posts.filter(post => post.title.includes(q as string)) })
         }
         case "PUT":
